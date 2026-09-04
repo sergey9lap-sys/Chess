@@ -134,14 +134,6 @@ function initMotion() {
         gsap.set(systemPath, { strokeDasharray: systemLength, strokeDashoffset: 0 });
       }
 
-      routeSection("#context", [
-        { targets: "#context .section-heading h2", position: 0 },
-        { targets: "#context .section-heading .section-lead" },
-        { targets: "#context .diagnostic-row", stagger: step },
-        { targets: "#context .section-note" },
-        { targets: "#context .section-action" }
-      ]);
-
       routeSection("#program", [
         { targets: "#program .section-heading h2", position: 0 },
         { targets: "#program .section-heading .section-lead" },
@@ -154,13 +146,6 @@ function initMotion() {
         ...(desktop ? [{ targets: "#system [data-system-route]", vars: { strokeDashoffset: systemLength, y: 0, autoAlpha: 1, duration: 0.72, ease: "power2.inOut" } }] : []),
         { targets: "#system .map-point", stagger: step + 0.02 },
         { targets: "#system .section-action" }
-      ]);
-
-      routeSection("#results", [
-        { targets: "#results .tabs-head h2", position: 0 },
-        { targets: "#results [role='tablist']" },
-        { targets: "#results .tab-panel:not([hidden]) .fit-intro" },
-        { targets: "#results .tab-panel:not([hidden]) .fit-list li", stagger: step }
       ]);
 
       routeSection("#format", [
