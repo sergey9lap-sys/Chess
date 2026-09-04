@@ -2062,3 +2062,25 @@ details[open] summary::after {
     animation-iteration-count: 1 !important;
   }
 }
+/* Compact spacing and supplied photographic portrait, shared with webinar. */
+.page-section { min-height: auto; padding-block: 4rem; }
+.hero { padding-top: 7rem; }
+.care { padding-block: 4rem; }
+.hero-system { min-height: 31rem; transform: none; display: flex; align-items: center; justify-content: center; }
+.hero-person { position: relative; inset: auto; width: min(82%, 26rem); }
+.hero-person::after, .hero-route { display: none; }
+.hero-person img { display: block; aspect-ratio: 0.8; object-fit: cover; object-position: center 20%; border-radius: var(--radius); filter: none; }
+@media (max-width: 820px) {
+  .site-header { display: none; }
+  .page-section, .care { padding-block: 2.5rem; }
+  .hero { min-height: auto; padding-top: 2rem; padding-bottom: 2.5rem; }
+  .hero-system { min-height: 0; }
+  .hero-person { inset: auto; width: min(75%, 24rem); }
+}
+@media (max-width: 540px) {
+  .hero-grid { column-gap: 0.6rem; grid-template-columns: minmax(0, 56%) minmax(0, 1fr); }
+  .hero h1 { margin: 0; font-size: clamp(2rem, 9.6vw, 3.05rem); }
+  .hero-system { margin: 0; align-self: center; min-height: 0; }
+  .hero-person { width: 100%; }
+  .hero-person img { aspect-ratio: 0.68; border-radius: 0.55rem; object-position: 50% 14%; }
+}
