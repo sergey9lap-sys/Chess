@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/mkclients", "destination": "/index.html" },
+    { "source": "/mkclients/", "destination": "/index.html" },
+    { "source": "/mkclients/:path*", "destination": "/:path*" }
+  ]
+}
